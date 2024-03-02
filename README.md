@@ -1,6 +1,6 @@
 # ToDo-app-in-ReactJS-with-Typescript.
 Klai ABdessattar Seniot FullStack Developer 
-https://github.com/klaiAbdessattarDev/ToDo-app-in-ReactJS-with-Typescript-and-C-.
+https://github.com/klaiAbdessattarDev/ToDo-app-in-ReactJS-with-Typescript
 ## Project description 
 This prject is a technical test for Vertis Germany.
 - The tasks must be longer than 10 characters. Otherwise an error message is displayed.
