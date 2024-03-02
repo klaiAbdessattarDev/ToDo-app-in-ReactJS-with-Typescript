@@ -1,0 +1,15 @@
+version: "3"
+services:
+ 
+  frontend:
+    image: node:20
+    container_name: frontend
+    working_dir: /app
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/app"
+      - "./package.json:/app/package.json" 
+      - "./package-lock.json:/app/package-lock.json"  
+

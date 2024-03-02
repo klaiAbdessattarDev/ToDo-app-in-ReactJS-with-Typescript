@@ -1,0 +1,263 @@
+@import '../node_modules/mini.css/dist/mini-nord.min.css';
+
+html,
+body,
+#root,
+.container,
+.center-page {
+  height: 100%;
+}
+
+html, body {
+  background-color: #f6f6f6;
+}
+
+.container {
+  min-width: 800px;
+  width: 35vw;
+  margin: 0 auto;
+}
+
+/* Header */ 
+
+.pageHeader {
+  text-align: center;
+  color: #ebd5d7;
+  padding: 10px 0;
+  font-size: 5rem;
+}
+
+.todoContainer{
+  position: relative;
+  background-color: #fff;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 5px 0px #e9e1e3;
+}
+
+.todoContainer::before{
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 0px #e9e1e3;
+  width: 98%;
+  height: 0.3rem;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todoContainer::after{
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px 0px #e9e1e3;
+  width: 96%;
+  height: 0.3rem;
+  bottom: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* Add */
+
+.addButton {
+  background-color: #e5c0c3;
+  color: white;
+  padding: 5px 10px;
+}
+
+.addForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.addForm>input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px !important;
+  background-color: #f6f6f6;
+}
+
+.addForm>input[type="text"] {
+  flex: 0 0 55%;
+}
+
+.addForm>input[type="datetime-local"] {
+  flex: 0 0 20%;
+  padding: 0px 10px;
+  height: 44px;
+}
+
+.addForm>button {
+  flex: 0 0 10%;
+  height: 44px; 
+}
+
+.addForm>button:hover, .addForm>button:focus {
+  background-color: #c3989b;
+}
+
+.addForm>.addError{
+  flex: 0 0 100%;
+  margin: 0;
+  width: 100%;
+  color: red;
+}
+
+.pageError {
+  margin: 0;
+  width: 100%;
+  color: red;
+}
+
+.todoList{
+  overflow: auto;
+  max-height: 19rem;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5c0c3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c3989b;
+}
+
+/* TodoItem */
+
+.todoRow{
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  margin: 8px 0;
+  min-height: 65px;
+  border-top: 2px dashed #e9e1e3;
+}
+
+.todoRow.overDue {
+  background-color: #ffd2d1;
+}
+
+.itemComplted{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 10%;
+}
+
+.itemName, .itemEditName {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex: 0 0 60%;
+  margin: 0;
+  /* background-color: lightblue; */
+}
+
+.itemName>div {
+  padding: 15px 0 15px 20px;
+}
+
+.itemStartAt, .itemEdiStartAt {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  /* background-color: lightgreen; */
+}
+
+.itemDelete{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.itemDelete>button{
+  background-color: #ff5959;
+  color: white;
+  padding: 10px 15px;
+}
+
+.itemDelete>button:disabled {
+  background-color: lightgray;
+}
+
+.itemDelete>button:disabled:hover {
+  background-color: gray;
+}
+
+.itemDelete>button:hover {
+  background-color: #e68b8b;
+}
+
+.completedCheckbox {
+  position: relative;
+  background: #f6f6f6;
+  display: block;
+  min-width: 2rem;
+  min-height: 2rem;
+  border: 2px solid #e9e1e3;
+  border-radius: 100%;
+}
+
+.completedCheckbox:hover{
+  border: 2px solid #e9e1e3 !important;
+  opacity: .6;
+}
+
+
+.completedCheckbox:checked{
+  background: #d8ebd5 !important;
+  border: 2px solid #afd7a9 !important;
+}
+
+.completedCheckbox:checked:hover{
+  border: 2px solid #afd7a9  !important;
+  opacity: .6;
+}
+
+.completedCheckbox::before{
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%,-50%);
+  color: #239f10 ;
+  font-weight: 900;
+}
+
+.center-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* reset styles on button */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: black;
+  border-radius: 8px !important;
+  padding: 0px 5px;
+  margin: 0;
+}
